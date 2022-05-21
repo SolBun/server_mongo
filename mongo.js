@@ -43,5 +43,4 @@ function Start() {
             console.log(result);
         });
     });
-    conn.close();
   }
