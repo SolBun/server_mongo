@@ -27,13 +27,13 @@ function Start() {
     // const mongoClient = new MongoClient("mongodb://rs01/rc1b-5xqb6qd8tfctnsi3.mdb.yandexcloud.net:27018/", { useNewUrlParser: true, useUnifiedTopology:true });
     console.log("Я тута😋!!!");
 
-    MongoClient.connect(url, options, function(err, conn) {
-        // const dbo = conn.db("bm_db1");
+    MongoClient.connect(url, options, function(err, conn) {        
+        const dbo = conn.db();
         if (err) {
             console.log("Я иметь ошибочку😐!!!");
             throw err;
         }
-        console.log(conn.databaseName())
+        console.log(dbo.databaseName)
         conn.collection('clients').find().toArray(function (err, result) {
             if (err) {
                 console.log("MongoDB послал меня😑!!!");
