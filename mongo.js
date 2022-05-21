@@ -28,7 +28,7 @@ function Start() {
     console.log("Я тута😋!!!");
 
     MongoClient.connect(url, options, function(err, conn) {        
-        const dbo = conn.db();
+        const dbo = conn.db("bm_db1");
         if (err) {
             console.log("Я иметь ошибочку😐!!!");
             throw err;
