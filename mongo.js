@@ -33,7 +33,7 @@ function Start() {
             console.log("Я иметь ошибочку😐!!!");
             throw err;
         }
-        console.log(conn.databaseName)
+        console.log(conn.databaseName())
         conn.collection('clients').find().toArray(function (err, result) {
             if (err) {
                 console.log("MongoDB послал меня😑!!!");
