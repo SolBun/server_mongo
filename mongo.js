@@ -34,7 +34,7 @@ function Start() {
             throw err;
         }
         console.log(dbo.databaseName)
-        conn.collection('clients').find().toArray(function (err, result) {
+        dbo.collection('clients').find().toArray(function (err, result) {
             if (err) {
                 console.log("MongoDB послал меня😑!!!");
                 throw err;
